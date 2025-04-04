@@ -12,12 +12,11 @@ class Funcionario {
   }
 
   exibirDetalhesdofuncionario() {
-    const bonus = this.calcularBonusfuncionario();
     console.log(
-      `A(o) Funcionária(o) ${
-        this.nome
-      }, recebe com o bônus de ${bonus} reais, ${
-        this.salario + bonus
+      `A(o) Funcionária(o) ${this.nome}, recebe com o bônus de ${
+        this.calcularBonusfuncionario
+      } reais, ${
+        this.salario + this.calcularBonusfuncionario
       } reais e foi admitida(o) no dia ${this.dataAdmissao}`
     );
   }
@@ -33,10 +32,11 @@ class Gerente extends Funcionario {
   }
 
   exibirDetalhesdogerente() {
-    const bonus = this.calcularBonusgerente();
     console.log(
-      `O(a) Gerente ${this.nome}, recebe com o bônus de ${bonus} reais ${
-        this.salario + bonus
+      `O(a) Gerente ${this.nome}, recebe com o bônus de ${
+        this.calcularBonusgerente
+      } reais ${
+        this.salario + this.calcularBonusgerente
       } reais, foi admitido(a) no departamento de ${this.departamento} no dia ${
         this.dataAdmissao
       }`
