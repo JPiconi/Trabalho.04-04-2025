@@ -8,19 +8,19 @@ class Funcionario {
     this.dataAdmissao = dataAdmissao;
   }
 
-  //MÉTODO DENTRO DA CLASSE, UTLIZADA PARA CALCULAR O BÔNUS 
+  //MÉTODO DENTRO DA CLASSE, UTLIZADA PARA CALCULAR O BÔNUS
   //DO NOSSO FUNCIONARIO A PARTIR DO SEU SALARIO
   calcularBonusfuncionario() {
     return this.salario * 0.1;
   }
-//MÉTODO PARA EXIBIR OS DETALHES DO QUE FIZEMOS, EXIBINDO O NOME O BÔNUS 
-//E QUANTO FICA JUNTO DO SEU SALARIO E A DATA QUE O FUNCIONARIO ENTROU NA EMPRESA
+  //MÉTODO PARA EXIBIR OS DETALHES DO QUE FIZEMOS, EXIBINDO O NOME O BÔNUS
+  //E QUANTO FICA JUNTO DO SEU SALARIO E A DATA QUE O FUNCIONARIO ENTROU NA EMPRESA
   exibirDetalhesdofuncionario() {
     console.log(
-      `A(o) Funcionária(o) ${this.nome}, recebe com o bônus de ${
-        this.calcularBonusfuncionario
-      } reais, ${
-        this.salario + this.calcularBonusfuncionario
+      `A(o) Funcionária(o) ${
+        this.nome
+      }, recebe com o bônus de ${this.calcularBonusfuncionario()} reais, ${
+        this.salario + this.calcularBonusfuncionario()
       } reais e foi admitida(o) no dia ${this.dataAdmissao}`
     );
   }
@@ -41,10 +41,10 @@ class Gerente extends Funcionario {
   //QUANDO QUE FICA JUNTO DE SEU SALARIO, O DEPARTAMENTO QUE ELE TRABALHA E QUANDO ELE ENTROU NA EMPRESA
   exibirDetalhesdogerente() {
     console.log(
-      `O(a) Gerente ${this.nome}, recebe com o bônus de ${
-        this.calcularBonusgerente
-      } reais ${
-        this.salario + this.calcularBonusgerente
+      `O(a) Gerente ${
+        this.nome
+      }, recebe com o bônus de ${this.calcularBonusgerente()} reais ${
+        this.salario + this.calcularBonusgerente()
       } reais, foi admitido(a) no departamento de ${this.departamento} no dia ${
         this.dataAdmissao
       }`
