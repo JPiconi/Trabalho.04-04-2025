@@ -7,12 +7,12 @@ class Funcionario {
     this.dataAdmissao = dataAdmissao;
   }
 
-  calcularBonus() {
+  calcularBonusfuncionario() {
     return this.salario * 0.1;
   }
 
-  exibirDetalhes() {
-    const bonus = this.calcularBonus();
+  exibirDetalhesdofuncionario() {
+    const bonus = this.calcularBonusfuncionario();
     console.log(
       `A(o) Funcionária(o) ${
         this.nome
@@ -24,29 +24,28 @@ class Funcionario {
 }
 
 class Gerente extends Funcionario {
-  constructor(nome, salario, dataAdmissao, departamento) {
+  constructor(nome, salario, departamento, dataAdmissao) {
     super(nome, salario, dataAdmissao);
     this.departamento = departamento;
   }
-  calcularBonus() {
+  calcularBonusgerente() {
     return this.salario * 0.2;
   }
 
-  exibirDetalhes2() {
-    const bonus = this.calcularBonus();
+  exibirDetalhesdogerente() {
+    const bonus = this.calcularBonusgerente();
     console.log(
-      `O(a) Gerente ${this.nome}
-      , recebe com o bônus de ${bonus} reais ${
+      `O(a) Gerente ${this.nome}, recebe com o bônus de ${bonus} reais ${
         this.salario + bonus
-      } reais, foi admitid0(a) no dia ${this.dataAdmissao} no departamento ${
-        this.departamento
+      } reais, foi admitido(a) no departamento de ${this.departamento} no dia ${
+        this.dataAdmissao
       }`
     );
   }
 }
 
 const funcionario = new Funcionario("Júlia", 2000, "02/10/2024");
-funcionario.exibirDetalhes();
-const gerente = new Gerente("Jorge", 4000, "10/02/1999", "T.I");
-gerente.exibirDetalhes2();
+funcionario.exibirDetalhesdofuncionario();
+const gerente = new Gerente("Jorge", 4000, "T.I", "10/02/1999");
+gerente.exibirDetalhesdogerente();
 /*------------------------------------------------------------------------------------------*/
